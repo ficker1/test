@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js测试</title>
+	<style type="text/css">
+	body{
+		margin:0;
+		padding:0;
+	}
+	#sidebar{
+		/*float: right;
+		position: absolute;
+		right: 0;*/
+		margin-top: 100px;
+		margin-left: auto;
+		margin-right: 0;  
+		width:134px;
+		overflow: hidden;
+	}
+	ul{
+		list-style-type: none;
+		margin:0;
+		padding: 0;
+		}
+	#sidebar ul li{
+		position: relative;
+		line-height: 30px;
+		border-bottom: 2px solid #666;
+		background: #00ccff;
+		left: 104px;
+		}
+	#sidebar ul li span{
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		background: #009933;
+		color: #fff;
+		text-align: center;
+		font-weight: bold;
+
+	}
+	
+	</style>
+</head>
+<body>
+	<div id ="sidebar">
+		<ul>
+		<li><span>1</span>xuzhilai</li>
+		<li><span>2</span>xuzhilai</li>
+		<li><span>3</span>xuzhilai</li>
+		<li><span>4</span>xuzhilai</li>
+		<li><span>5</span>xuzhilai</li>
+		<li><span>6</span>xuzhilai</li>
+		<li><span>7</span>xuzhilai</li>
+		<li><span>8</span>xuzhilai</li>
+		<li><span>9</span>xuzhilai</li>
+		<li><span>10</span>xuzhilai</li>
+		<li><span>11</span>xuzhilai</li>
+		<li><span>12</span>xuzhilai</li>
+		<li><span>13</span>xuzhilai</li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript">
+		$("#sidebar").hover(function(){
+
+				$("li").each(function(i){
+
+					setTimeout(function(){
+
+						$(this).animate({left:0},500);
+					}.bind(this),i*50);
+					
+			
+			});
+		},function(){
+				$("li").each(function(i){
+					setTimeout(function(){
+						$(this).animate({left:"107px"},500);
+					}.bind(this),i*50);
+					
+				})
+			});
+	</script>
+</body>
+</html>
